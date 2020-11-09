@@ -1,7 +1,7 @@
 <template>
   <b-container class="container mt-5">
     <b-row>
-      <b-col cols="8">
+      <b-col cols lg="8" sm="12">
         <b-input
         type="text"
         id="searchText"
@@ -10,7 +10,7 @@
         required>
       </b-input>
       </b-col>
-      <b-col cols="4">
+      <b-col cols lg="4" sm="12">
       <b-button :disabled="searchName == ''" @click="Search()" variant="info" class="my-2 my-sm-0 mr-3">Buscar</b-button>
       <b-button @click="Clear()" variant="outline-info" class="my-2 my-sm-0 mr-3">Mostrar todo</b-button>      
       </b-col>
@@ -35,7 +35,7 @@
        <b-spinner v-if="spinnerLoading == true"></b-spinner>
     </div>
     <b-row class="mt-5" >
-      <b-col cols lg="3" sm="12" col v-for="personaje in personajes" :key="personaje.id">
+      <b-col cols lg="3" md="6" sm="12" col v-for="personaje in personajes" :key="personaje.id">
               <b-card
               :title="personaje.name"
               :img-src="personaje.image"
